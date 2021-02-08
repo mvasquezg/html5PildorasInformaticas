@@ -50,7 +50,7 @@ p:last-child{
 
 #principal{
     width: 500px;
-    background-color: #00f;
+    /*background-color: #00f;*/
     text-align: center;
     color: #fff;
     margin: 15px auto;
@@ -59,11 +59,39 @@ p:last-child{
     border: 3px solid #f00;
     border-radius: 25px;
     box-shadow: #999 45px 15px 10px;
+    /*background: -moz-linear-gradient(bottom, #00f, #3ff);
+    background: -webkit-linear-gradient(bottom, #00f, #3ff);
+    background: -ms-linear-gradient(bottom, #00f, #3ff);
+    background: -o-linear-gradient(bottom, #00f, #3ff)0;*/
+
+   /* background: -moz-linear-gradient(left, #00f 50%, #3ff 50%);*/
+   /*background: -moz-linear-gradient(left, #00f 1%, #3ff 95%);*/
+
+   /*background: -moz-linear-gradient(left, #00f, #3ff);*/
+
+   background: -moz-radial-gradient(center, ellipse, #00f, #3ff);
+   /*outline: 2px dashed #00f;
+   outline-offset: 10px;*/
+   /*-moz-transform: scale(1, -1);*/
+    /*-moz-transform: rotate(18deg); */
+   /*-moz-transform: skew(300deg);*/
+   -moz-transition:-moz-transform 1s ease 0.5;
 }
 
+#principal:hover{
+    rotate: 5deg;
+}
+
+@font-face{
+    font-family: 'prueba';
+    src: url('../font/BAUHS93.ttf');
+}
+
+
 #titulo{
-    font: bold 36px Verdana, Geneva, sans-serif;
+    font: bold 36px 'prueba';
     text-shadow: #f00 5px 5px 10px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*body{
+    background-color: aqua;
+}*/
+
+/*header{
+    background-color: #00f;
+}*/
+
+#cabecera{
+    background-color: #00f;
+}
+
+nav{
+    background-color: #ab00cd;
+}
+
+#barraLateral{
+    background-color: #0f0;
+    float:left;
+    height: 1040px;
+    margin-left: 0;
+}
+
+#contenidoPrincipal{
+    background-color: #606;
+    margin-left: 250px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#piePrincipal{
+    background-color: #f00;
+    clear: both;
+    margin-top: 30px;
+}
+
+li{
+    background-color: #ff0;
+    display: inline;
+}

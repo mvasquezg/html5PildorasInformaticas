@@ -1,0 +1,71 @@
+/*p[name="misElementos"]{
+    color: #f00;
+}*/
+
+/*Aplica a las propiedades que empeizan por 
+p[name^="mis"]{
+    color: #f00;
+}*/
+
+/*Aplica a las propiedades que terminan por 
+p[name$="os"]{
+    color: #f00;
+}*/
+
+/*Aplica a las propiedades a todos los elemntos que entucntre la palabras en cualquier punto
+p[name*="os"]{
+    color: #f00;
+}*/
+
+/*Aplincaod formato al segundo hijo mencionaod een el parentesis del padre
+p:nth-child(3){
+    color: #f00;
+}
+*/
+
+/*Aplincaod formato alos hijos impares del padre
+p:nth-child(odd){
+    color: #f00;
+}*/
+
+/*Aplincaod formato alos hijos pares del padre
+p:nth-child(even){
+    color: #f00;
+}*/
+
+/*Aplincaod formato alos primeros hijos  del padre
+p:first-child{
+    color: #f00;
+}*/
+
+/*Aplincaod formato alos ultimos hijos  del padre
+p:last-child{
+    color: #f00;
+}*/
+
+/*Aplincaod formato a los hijos unicos del padre
+p:last-child{
+    color: #f00;
+}*/
+
+#principal{
+    width: 500px;
+    background-color: #00f;
+    text-align: center;
+    color: #fff;
+    margin: 15px auto;
+    font-weight: bold;
+    padding: 15px;
+    border: 3px solid #f00;
+    border-radius: 25px;
+    box-shadow: #999 45px 15px 10px;
+}
+
+#titulo{
+    font: bold 36px Verdana, Geneva, sans-serif;
+    text-shadow: #f00 5px 5px 10px;
+}
+
+
+
+

@@ -125,7 +125,7 @@ window.addEventListener("load", cargarFuncion, false); */
 /********************** Finaliza codigo para la pagina anidados.html *******************************/
 
 /********************** Inicia codigo repoructor de video para la pagina video.html *******************************/
-    var idMiVideo, idBotones, idBarra, idProgreso,idPlay, idVideo, maximo, bucle;
+    /*var idMiVideo, idBotones, idBarra, idProgreso,idPlay, idVideo, maximo, bucle;
     maximo=600;
 
     function comenzar(){
@@ -176,6 +176,63 @@ window.addEventListener("load", cargarFuncion, false); */
         }
     }
 
-    window.addEventListener("load", comenzar, false);
+    window.addEventListener("load", comenzar, false);*/
 
 /********************** Finaliza codigo repoructor de video para la pagina video.html *******************************/
+
+
+/********************** Inicia codigo reprouctor de audio para la pagina audio.html *******************************/
+    var idAudioPlay, idBotones, idBarra, idProgreso,idPlay, idVideo, maximo, bucle;
+    maximo=600;
+
+    function comenzar(){
+        idAudioPlay = document.getElementById("idAudioPlay");
+        idPlay = document.getElementById("idPlay");
+        idBarra = document.getElementById("idBarra");
+        idProgreso = document.getElementById("idProgreso");
+
+        idPlay.addEventListener("click", reproducir, false);
+        //idProgreso.addEventListener("click", adelantar, false);
+        idBarra.addEventListener("click", adelantar, false);
+    }
+
+    function reproducir(){
+        if( (idAudioPlay.paused==false) && (idAudioPlay.ended==false) ){
+            idAudioPlay.pause();
+            idPlay.innerHTML="Play";
+        }else{
+            idAudioPlay.play();
+            idPlay.innerHTML="Pause";
+            
+            bucle=setInterval(estado, 30);
+
+            
+        }
+    }//end reproducir
+
+    function estado(){
+        var total=0;
+        
+        if( idAudioPlay.ended==false){
+            total=parseInt( (idAudioPlay.currentTime*maximo) / idAudioPlay.duration);
+            
+            idProgreso.style.width=total+"px";
+        }
+    }//end estado
+
+
+    function adelantar(posicion){
+        if( idAudioPlay.paused == false && idAudioPlay.ended==false ){
+            var ratonX=posicion.pageX-idBarra.offsetLeft;
+
+            var nuevoTiempo=ratonX*idAudioPlay.duration/maximo;
+
+            idAudioPlay.currentTime=nuevoTiempo;
+
+            idProgreso.style.width=ratonX+"px";
+        }
+    }
+
+    window.addEventListener("load", comenzar, false);
+
+/********************** Finaliza codigo repoructor de audio para la pagina audio.html *******************************/

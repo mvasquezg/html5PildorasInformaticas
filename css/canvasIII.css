@@ -1,0 +1,11 @@
+#idLienzo{
+    border: 1px #f00 solid;
+
+}
+
+
+section{
+    width: 500px;
+    position: relative;
+    margin: auto;
+}

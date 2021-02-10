@@ -1,0 +1,11 @@
+table{
+    text-align: center;
+    background-color: #f96;
+    width: 25%;
+    margin: auto;
+    border: 2px #f30 dashed;
+}
+
+td{
+    padding: 15px;
+}

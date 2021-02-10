@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+
+    <!--<link rel="stylesheet" href="../html5PildorasInformaticas/css/audio.css"/>
+    <script src="../html5PildorasInformaticas/js/js.js"></script>-->
+    
+</head>
+
+<body>
+
+    <section>
+        <form action="" name="formulario" id="idFormulario" method="GET">
+            
+            <input type="text" name="texto" id="idTexto" autocomplete="off"/>
+            <p></p>
+            
+            Email: <input type="email" name="mail" id="idMail"  /><!--required multiple-->
+            <p></p>
+            
+            Busqueda: <input type="search" name="buscar" id="idBuscar" />
+            <p></p>
+
+            URL: <input type="url" name="url" id="idUrl" />
+            <p></p>
+
+            Numero: <input autofocus type="number" name="numero" id="idNumero" min="0" max="100" step="2" placeholder="Multiplos de 5"/>
+            <p></p>
+
+            Rango: <input type="range" name="rango" id="idRango" min="5" max="105"/>
+            <p></p>
+
+            Fecha: <input type="date" name="fecha" id="idFecha" />
+            <p></p>
+
+            Mes: <input type="month" name="mes" id="idMes" />
+            <p></p>
+
+            Semana: <input type="week" name="semana" id="idSemana" />
+            <p></p>
+
+            Horas: <input type="time" name="hora" id="idHora" />
+            <p></p>
+
+            Zona Horaria: <input type="datetime" name="zonaHoraria" id="idZonaHoraria" />
+            <p></p>
+
+            Codigo Postal: <input pattern="[0-9]{5}" name="codigoPostal" id="idCodigoPostal" placeholder="5 digitos"/>
+            <p></p>
+
+
+            <input type="submit" value="Enviar" />
+        </form>
+    </section>
+    <p></p>
+    <img src="../html5PildorasInformaticas/img/1.jpg">
+    <p></p>
+    Campo nuevo: <input type="text" name="campoNuevo" id="idCampoNuevo" form="idFormulario"/>
+     
+</body>
+
+</html>

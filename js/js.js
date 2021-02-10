@@ -103,7 +103,7 @@ window.addEventListener("load", cargarFuncion, false); */
 
 
 /********************** inicia codigo para la pagina anidados.html *******************************/
-    function mostrarMensajeImagen(){
+    /*function mostrarMensajeImagen(){
         alert("soy la imagen");
     }
 
@@ -120,6 +120,62 @@ window.addEventListener("load", cargarFuncion, false); */
         elemento2.addEventListener("click", mostrarMensajeImagen, false)
     }
 
-    window.addEventListener("load", llamarFunciones, false);
+    window.addEventListener("load", llamarFunciones, false);*/
 
 /********************** Finaliza codigo para la pagina anidados.html *******************************/
+
+/********************** Inicia codigo repoructor de video para la pagina video.html *******************************/
+    var idMiVideo, idBotones, idBarra, idProgreso,idPlay, idVideo, maximo, bucle;
+    maximo=600;
+
+    function comenzar(){
+        idMiVideo = document.getElementById("idMiVideo");
+        idPlay = document.getElementById("idPlay");
+        idBarra = document.getElementById("idBarra");
+        idProgreso = document.getElementById("idProgreso");
+
+        idPlay.addEventListener("click", reproducir, false);
+        //idProgreso.addEventListener("click", adelantar, false);
+        idBarra.addEventListener("click", adelantar, false);
+    }
+
+    function reproducir(){
+        if( (idMiVideo.paused==false) && (idMiVideo.ended==false) ){
+            idMiVideo.pause();
+            idPlay.innerHTML="Play";
+        }else{
+            idMiVideo.play();
+            idPlay.innerHTML="Pause";
+            
+            bucle=setInterval(estado, 30);
+
+            
+        }
+    }//end reproducir
+
+    function estado(){
+        var total=0;
+        
+        if( idMiVideo.ended==false){
+            total=parseInt( (idMiVideo.currentTime*maximo) / idMiVideo.duration);
+            
+            idProgreso.style.width=total+"px";
+        }
+    }//end estado
+
+
+    function adelantar(posicion){
+        if( idMiVideo.paused == false && idMiVideo.ended==false ){
+            var ratonX=posicion.pageX-idBarra.offsetLeft;
+
+            var nuevoTiempo=ratonX*idMiVideo.duration/maximo;
+
+            idMiVideo.currentTime=nuevoTiempo;
+
+            idProgreso.style.width=ratonX+"px";
+        }
+    }
+
+    window.addEventListener("load", comenzar, false);
+
+/********************** Finaliza codigo repoructor de video para la pagina video.html *******************************/

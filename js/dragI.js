@@ -8,9 +8,9 @@ function comenzar(){
     //elemento.addEventListener("drag", function(){
     elementoOrigen.addEventListener("dragstart", arrastrar ,false);
     
-    elementoDestino.addEventListener("dragenter",function(e){
+    /*elementoDestino.addEventListener("dragenter",function(e){
                 e.preventDefault();
-    } ,false);
+    } ,false);*/
 
     elementoDestino.addEventListener("dragover",function(e){
         e.preventDefault();
@@ -18,6 +18,11 @@ function comenzar(){
 
     elementoDestino.addEventListener("drop", soltar ,false);
 
+    elementoOrigen.addEventListener("dragend", terminar, false);
+
+    elementoDestino.addEventListener("dragenter", entrar ,false);
+
+    elementoDestino.addEventListener("dragleave", salir, false);
 }//end comenzar
 
 function arrastrar(e){
@@ -34,6 +39,26 @@ function soltar(e){
     elementoDestino.innerHTML=e.dataTransfer.getData("Text");
 }//end soltar
 
+function terminar(e){
+    var elemento=e.target;
 
+    elemento.style.visibility="hidden";
+}   
+
+function entrar(e){
+        e.preventDefault();
+
+        elementoDestino.style.background="rgba(8,255,25,.8)";
+}
+
+function salir(e){
+    e.preventDefault();
+
+    //pone en blanco la zona destnio al salir 
+    //elementoDestino.style.background="#fff";
+
+    //oculta la zona de destino al salir
+    elementoDestino.style.visibility="hidden";
+}
 
 window.addEventListener("load", comenzar, false);

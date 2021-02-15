@@ -110,6 +110,16 @@ function listar(archivos){
 
 function mostrarErrores(e){
     alert("Ha habido un error: " + e.code);
-}   
+}
+
+function volver(){
+    espacio.getDirectory(ruta, null, function(dirActual){
+        dirActual.getParent(function(dirPadre){
+            ruta=dirPadre.fullPath;
+            mostrar();
+        }, mostrarErrores);
+
+     },  mostrarErrores);
+}//end volver
 
 window.addEventListener("load", comenzar, false);

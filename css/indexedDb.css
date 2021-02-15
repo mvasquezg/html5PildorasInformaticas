@@ -1,0 +1,28 @@
+#idContenedor{
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+#idZonaFormulario{
+    float: left;
+    padding: 20px;
+    border: 1px solid #039;
+    margin-left: 150px;
+}
+
+#idZonaDatos{
+    float: right;
+    width: 250px;
+    margin-left: 20px;
+    border: 1px solid #f00;
+}
+
+#idClave, #valor{
+    width: 180px;
+}
+
+#idZonaDatos div{
+    padding: 15px;
+    border-bottom: 3px solid #00f;
+}

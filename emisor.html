@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/mensaje.css"/>
+        <script src="../js/emisor.js"></script>
+
+        <title>Emisor</title>
+    </head>
+    
+    
+    <body>
+        <section id="idZonaDatos">
+            
+            <iframe  id="idFrame" src="receptor.html" frameborder="0" width="500" height="350">
+
+            </iframe>
+
+        </section>
+        
+        <section id="idZonaRecepcion">
+            Mensaje desde pagina recepcion
+            <p></p>
+
+        </section>
+        
+        <section id="idZonaFormulario">
+
+            <form action="">
+                Mensaje:
+                <P>
+                     <textarea name="areaTexto" cols="45" rows="10" required id="idTxtMensaje"></textarea>
+                </P>
+                <p>
+                    <input type="button" id="idBtnEnviar" value="Enviar Mensaje" /> 
+                </p>
+            </form>
+
+        </section>
+    </body>
+
+</html>

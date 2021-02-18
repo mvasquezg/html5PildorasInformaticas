@@ -1,0 +1,13 @@
+#idZonaFormulario{
+    float: left;
+    padding: 30px;
+    border: 2px dotted #00f;
+}
+
+#idZonaDatos{
+    float: left;
+    width: 500px;
+    margin-left: 50px;
+    padding: 30px;
+    border: 2px dotted #f00;
+}

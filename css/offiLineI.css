@@ -1,0 +1,10 @@
+
+#idZonaDatos{
+    width: 800px;
+    height: 800px;
+    margin: 15px;
+    padding: 15px;
+    border: 2px dotted #00f;
+    text-align: center;
+}
+
